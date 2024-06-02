@@ -1,22 +1,14 @@
 // import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/login/Login";
-import Registrasi from "./pages/registrasi/Registrasi";
+import BrowserRouter from './routes/BrowserRouter'
+import { UserProvider } from './contexts/UserContext'
 
 function App() {
-  
-  return (
-    <>
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Registrasi />}>
-          {/* <Route path="/registrasi" element={<Registrasi />} /> */}
-          {/* <Route path="contact" element={<Contact />} /> */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    </>
-  )
+
+    return (
+        <UserProvider>
+            <BrowserRouter />
+        </UserProvider>
+    )
 }
 
 export default App
