@@ -1,5 +1,4 @@
 // import './App.css'
-import './index.css'
 import BrowserRouter from './routes/BrowserRouter'
 import { UserProvider } from './contexts/UserContext'
 
